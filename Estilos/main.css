@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Principal';
+    src: url(../Fontes/StaticFont/MozillaText-VariableFont_wght.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'Codigo';
+    src: url(../Fontes/CodigoFont/GoogleSansCode-VariableFont_MONO\,wght.ttf) format(truetype);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+         --cor01: #e7b38fbe;
+         --cor02: #d6d455;   
+    }
