@@ -62,6 +62,7 @@ h1 {
     font: normal 300 1.4em 'Principal',Arial, Helvetica, sans-serif;
     max-width: 424px;       /* Ajuste para a largura desejada */
     align-self: flex-start;
+    line-height: 33px;
 }
 
 form {
