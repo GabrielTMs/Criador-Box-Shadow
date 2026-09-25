@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'Principal';
-    src: url(../Fontes/StaticFont/MozillaText-VariableFont_wght.ttf) format(truetype);
+    src: url('../Fontes/StaticFont/MozillaText-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Codigo';
-    src: url(../Fontes/CodigoFont/GoogleSansCode-VariableFont_MONO\,wght.ttf) format(truetype);
+    src: url('../Fontes/CodigoFont/GoogleSansCode-VariableFont_MONO\,wght.ttf') format('truetype');
 }
 
 * {
@@ -17,5 +17,205 @@
 
 :root {
          --cor01: #e7b38fbe;
-         --cor02: #d6d455;   
+         --cor02: #3e72b6;   
     }
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: grid;
+    grid-template:auto auto auto/ auto auto auto;
+    place-content: center;
+    place-items: center;
+    gap: 14px;
+    background-color: rgba(127, 255, 212, 0.336);
+    padding: 15px 20px;
+    border: 2px solid rgb(84, 206, 165);
+    border-radius: 10px;
+}
+
+div#campConfig {
+    grid-column: 1/2;
+    grid-row: 2/-2;
+    margin-right: 10px;
+}
+
+h1 {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    font: normal 500 2em 'Principal',Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid rgba(64, 146, 108, 0.377);
+    width: 96%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.titulInputs {
+    font: normal 300 1.4em 'Principal',Arial, Helvetica, sans-serif;
+    max-width: 424px;       /* Ajuste para a largura desejada */
+    align-self: flex-start;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 37px;
+    margin-top: 27px;
+}
+
+form div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+}
+
+form div p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 8px; /* Espaçamento uniforme entre slider, caixa de texto e 'Px' */
+}
+
+input[type=range] {
+    appearance: none;
+    width: 100%;
+    max-width: 350px;
+    height: 22px;
+    background-color: rgba(0, 0, 0, 0.267);
+    outline: none;
+    border-radius: 3px;
+    transform: translateY(34%);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    width: 26px;
+    height: 30px;
+    background-color: var(--cor02);
+    border-radius: 8px;
+}
+
+input[type = text] {
+    width: 100%;
+    max-width: 29px;
+    height: 16px;
+    outline: none;
+    border: none;
+    background-color: bisque;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.356);
+    transform: translateY(22%);
+    padding: 5px;
+    font: normal 1em Arial, Helvetica, sans-serif;
+    text-align: center;
+    transition: .1s;
+}
+
+label {
+    display: inline-block;
+    font: normal 1em Arial, Helvetica, sans-serif;
+    transform: translateY(35%);
+}
+
+input[type = text]:focus-within {
+    background-color: rgb(245, 245, 245);
+    box-shadow: 1px 1px 3px rgba(64, 146, 108, 0.904);
+}
+
+input[type = text]::placeholder {
+    color: rgba(0, 0, 0, 0.411);
+}
+
+div#campBoxPreview {
+    grid-column: 2/-1;
+    grid-row: 2/-2;
+    height: 94%;
+    align-self: flex-start;
+    margin-top: 24.5px;
+    border-left: 1px solid rgba(64, 146, 108, 0.377);
+    padding-left: 24px;
+}
+
+h2 {
+    font: normal 300 1.9em 'Principal',Arial, Helvetica, sans-serif;
+}
+
+div#blocoBoxShadow {
+    width: 100%;
+    max-width: 441px;
+    margin: 0px auto;
+    min-height: 240px;
+    background-color: rgb(224, 169, 97);
+    padding-bottom: 20px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 0px black;
+    border-radius: 10px;
+}
+
+div#campCopiaCode {
+    width: 100%;
+    max-width: 600px;
+    grid-column: 1/-1;
+    grid-row: 3/-1;
+    margin-top: 29px;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: #f0b59d9a;
+    border: 1px dashed #eb9573d8;
+    border-radius: 10px;
+    gap: 15px;
+    cursor: pointer;
+}
+
+h3 {
+    font: normal 500 1.3em 'Principal',Arial, Helvetica, sans-serif;
+}
+
+div#campCopiaCode p {
+    margin: 8px 0px;
+    font: normal 300 1.1em 'Codigo',Arial, Helvetica, sans-serif;
+}
+
+div#codeCampo {
+    padding-top: 2px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+}
+
+.iconCopy {
+    font-size: 1.5em;
+    color: #0000007a;
+    opacity: 0;
+    transition: .3s;
+}
+
+div#campCopiaCode:hover .iconCopy {
+    opacity: 1;
+}
+
+.esconder {
+    display: none !important;
+}
+
+

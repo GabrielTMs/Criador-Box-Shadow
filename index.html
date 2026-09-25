@@ -6,45 +6,47 @@
     <title>Gerador de box shadow</title>
     <link rel="stylesheet" href="Estilos/main.css">
     <script src="JS/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/8125016427.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
-        <div id="campConfig">
-            <h1>Configuração da Box Shadow.</h1>
-            <form method="get" id="inputsCampo">
-                <div>
-                    <p class="titulInputs">Deslocamento horizontal:</p>
-                    <p>
-                        <input type="range" name="deslocX" id="ideslocX" min="-100" max="100">
-                        <input type="text" name="desloTextX" id="idesloTextX">
-                        Px
-                    </p>
-                </div>
-                <div>
-                    <p class="titulInputs">Deslocamento vertical:</p>
-                    <p>
-                        <input type="range" name="deslocY" id="ideslocY" min="-100" max="100">
-                        <input type="text" name="desloTextY" id="idesloTextY">
-                        Px
-                    </p>
-                </div>
-                <div>
-                    <p class="titulInputs">Intensão do borrão (blur):</p>
-                    <p>
-                        <input type="range" name="blurs" id="iblurs" min="-100" max="100">
-                        <input type="text" name="blursText" id="iblursText">
-                        Px
-                    </p>
-                </div>
-                <div>
-                    <p class="titulInputs">Intensidade do espalhamento (spread):</p>
-                    <p>
-                        <input type="range" name="spread" id="ispread" min="-100" max="100">
-                        <input type="text" name="spreadText" id="ispreadText">
-                        Px
-                    </p>
-                </div>
-            </form>
+        <h1>Configuração da Box Shadow.</h1>
+            <div id="campConfig">
+                <form method="get" id="inputsCampo">
+                    <div>
+                        <p class="titulInputs">Deslocamento horizontal:</p>
+                        <p>
+                            <input type="range" name="deslocX" id="ideslocX" min="-100" max="100">
+                            <input type="text" name="desloTextX" id="idesloTextX" placeholder="0">
+                            <label for="desloTextX">Px</label>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="titulInputs">Deslocamento vertical:</p>
+                        <p>
+                            <input type="range" name="deslocY" id="ideslocY" min="-100" max="100">
+                            <input type="text" name="desloTextY" id="idesloTextY" placeholder="0">
+                            <label for="desloTextY">Px</label>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="titulInputs">Intensão do borrão (blur):</p>
+                        <p>
+                            <input type="range" name="blurs" id="iblurs" min="-100" max="100">
+                            <input type="text" name="blursText" id="iblursText" placeholder="0">
+                            <label for="blursText">Px</label>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="titulInputs">Intensidade do espalhamento (spread):</p>
+                        <p>
+                            <input type="range" name="spread" id="ispread" min="-100" max="100">
+                            <input type="text" name="spreadText" id="ispreadText" placeholder="0">
+                            <label for="spreadText">Px</label>
+                        </p>
+                    </div>
+                </form>
+            </div>
             
             <div id="campBoxPreview">
                 <h2>Preview do efeito de Box Shadow</h2>
@@ -52,14 +54,19 @@
             </div>
 
             <div id="campCopiaCode">
-                <h3>Copie e cole o código no seu arquivo de CSS:</h3>
-                <div id="codigoCopy">
-                    <p>box-shadow</p>
-                    <p>-webkit-box-shadow</p>
-                    <p>-moz-box-shadow</p>
+                <i class="fa-regular fa-copy iconCopy"></i>
+                <i class="fa-solid fa-check-double iconCopy esconder"></i>
+                <div id="codeCampo">
+                    <h3>Copie e cole o código no seu arquivo de CSS:</h3>
+                    <div id="codigoCopy">
+                        <p>box-shadow</p>
+                        <p>-webkit-box-shadow</p>
+                        <p>-moz-box-shadow</p>
+                    </div>
                 </div>
+                <i class="fa-regular fa-copy iconCopy"></i>
+                <i class="fa-solid fa-check-double iconCopy esconder"></i>
             </div>
-        </div>
     </main>
     
 </body>
