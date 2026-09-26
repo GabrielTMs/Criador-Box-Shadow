@@ -162,7 +162,6 @@ div#blocoBoxShadow {
     background-color: rgb(224, 169, 97);
     padding-bottom: 20px;
     margin-top: 30px;
-    box-shadow: 0px 0px 0px black;
     border-radius: 10px;
 }
 
@@ -191,7 +190,7 @@ h3 {
 
 div#campCopiaCode p {
     margin: 8px 0px;
-    font: normal 300 1.1em 'Codigo',Arial, Helvetica, sans-serif;
+    font: normal 300 1em 'Codigo',Arial, Helvetica, sans-serif;
 }
 
 div#codeCampo {
