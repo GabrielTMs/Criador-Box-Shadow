@@ -9,6 +9,9 @@ class BoxShadowGenerator {
         blurTextInput,
         spreadRangeInput,
         spreadTextInput,
+        colorInput,
+        colorTextInput,
+        insetInput,
         opacityRangeInput,
         opacityTextInput,
         box,
@@ -30,7 +33,10 @@ class BoxShadowGenerator {
         this.box = box;
         this.codigoBox = codigoBox;
         this.codigoWebkit = codigoWebkit;
-        this.codigoMoz = codigoMoz; 
+        this.codigoMoz = codigoMoz;
+        this.colorInput = colorInput;
+        this.colorTextInput = colorTextInput;
+        this.insetInput = insetInput; 
     }
 
     linkInputs() {
@@ -93,6 +99,11 @@ const spreadTextInput = document.querySelector("#ispreadText");
 const opacityRangeInput = document.querySelector("#iopacity");
 const opacityTextInput = document.querySelector("#iopacityText");
 
+const colorInput = document.querySelector("#icores");
+const colorTextInput = document.querySelector("#icorText");
+
+const insetInput = document.querySelector("#iInset");
+
 const box = document.querySelector("#blocoBoxShadow");
 
 const codigoBox = document.querySelector("#codeBox span");
@@ -109,6 +120,9 @@ const boxShadowConstructor = new BoxShadowGenerator(
         blurTextInput,
         spreadRangeInput,
         spreadTextInput,
+        colorInput,
+        colorTextInput,
+        insetInput,
         opacityRangeInput,
         opacityTextInput,
         box,
