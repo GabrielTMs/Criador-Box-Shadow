@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de box shadow</title>
     <link rel="stylesheet" href="Estilos/main.css">
+    <link rel="stylesheet" href="Estilos/mobile.css">
     <script src="JS/script.js" defer></script>
     <script src="https://kit.fontawesome.com/8125016427.js" crossorigin="anonymous"></script>
 </head>
@@ -43,6 +44,30 @@
                             <input type="range" name="spread" id="ispread" min="-100" max="100" value="5">
                             <input type="text" name="spreadText" id="ispreadText" placeholder="0">
                             <label for="spreadText">Px</label>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="titulInputs">Definindo a cor da sombra:</p>
+                        <p id="paragrafoCor">
+                            <input type="color" name="cores" id="icores">
+                            <input type="text" name="corText" id="icorText" placeholder="#000000">
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="titulInputs">Opacidade</p>
+                        <p>
+                            <input type="range" name="opacity" id="iopacity" min="0" max="1" value="1" step="0.01">
+                            <input type="text" name="opacityText" id="iopacityText" placeholder="0">
+                            <label for="opacityText">Px</label>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="titulInputs">Sombra interna (Inset):</p>
+                        <p id="opcaoInset">
+                            <input type="checkbox" name="inset" id="iInset">
                         </p>
                     </div>
                 </form>

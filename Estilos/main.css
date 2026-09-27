@@ -22,7 +22,7 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-flow: column;
     align-content: center;
@@ -182,6 +182,11 @@ div#campCopiaCode {
     border-radius: 10px;
     gap: 15px;
     cursor: pointer;
+    transition: .3s;
+}
+
+div#campCopiaCode:hover {
+    background-color: rgba(219, 158, 134, 0.582);
 }
 
 h3 {
@@ -214,6 +219,28 @@ div#campCopiaCode:hover .iconCopy {
     opacity: 1;
 }
 
+#opcaoInset {
+    align-self: flex-start;
+}
+
+input#iInset {
+    width: 20px;
+    height: 20px;
+}
+
+#paragrafoCor {
+    align-self: flex-start;
+}
+
+#icorText {
+    max-width: 90px;
+    transform: translateY(5%);
+}
+
+input[type=color] {
+    width: 80px;
+    height: 35px;
+}
 .esconder {
     display: none !important;
 }

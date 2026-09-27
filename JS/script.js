@@ -9,6 +9,8 @@ class BoxShadowGenerator {
         blurTextInput,
         spreadRangeInput,
         spreadTextInput,
+        opacityRangeInput,
+        opacityTextInput,
         box,
         codigoBox,
         codigoWebkit,
@@ -23,6 +25,8 @@ class BoxShadowGenerator {
         this.blurTextInput = blurTextInput; 
         this.spreadRangeInput = spreadRangeInput; 
         this.spreadTextInput = spreadTextInput;
+        this.opacityRangeInput = opacityRangeInput;
+        this.opacityTextInput = opacityTextInput;
         this.box = box;
         this.codigoBox = codigoBox;
         this.codigoWebkit = codigoWebkit;
@@ -34,6 +38,7 @@ class BoxShadowGenerator {
        this.verticalTextInput.value = this.verticalRangeInput.value; 
        this.blurTextInput.value = this.blurRangeInput.value; 
        this.spreadTextInput.value = this.spreadRangeInput.value;
+       this.opacityTextInput.value = this.opacityRangeInput.value;
        
        this.aplicandoSombraECode();
        this.colocandoNoCode();
@@ -85,6 +90,9 @@ const blurTextInput = document.querySelector("#iblursText");
 const spreadRangeInput = document.querySelector("#ispread");
 const spreadTextInput = document.querySelector("#ispreadText");
 
+const opacityRangeInput = document.querySelector("#iopacity");
+const opacityTextInput = document.querySelector("#iopacityText");
+
 const box = document.querySelector("#blocoBoxShadow");
 
 const codigoBox = document.querySelector("#codeBox span");
@@ -101,6 +109,8 @@ const boxShadowConstructor = new BoxShadowGenerator(
         blurTextInput,
         spreadRangeInput,
         spreadTextInput,
+        opacityRangeInput,
+        opacityTextInput,
         box,
         codigoBox,
         codigoWebkit,
