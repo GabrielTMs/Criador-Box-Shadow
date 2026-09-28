@@ -37,6 +37,7 @@ class BoxShadowGenerator {
         this.colorInput = colorInput;
         this.colorTextInput = colorTextInput;
         this.insetInput = insetInput; 
+        this.insetValue = insetInput.checked; 
     }
 
     linkInputs() {
@@ -45,14 +46,22 @@ class BoxShadowGenerator {
        this.blurTextInput.value = this.blurRangeInput.value; 
        this.spreadTextInput.value = this.spreadRangeInput.value;
        this.opacityTextInput.value = this.opacityRangeInput.value;
+       this.colorTextInput.value = this.colorInput.value;
        
        this.aplicandoSombraECode();
        this.colocandoNoCode();
     }
 
     aplicandoSombraECode() {
-        this.box.style.boxShadow = `${this.horizontalTextInput.value}px ${this.verticalTextInput.value}px ${this.blurTextInput.value}px ${this.spreadTextInput.value}px #000000`
-        this.currentRule = this.box.style.boxShadow;
+        const corToRgb = this.hexCorToRgb(this.colorTextInput.value);
+
+        console.log(this.insetValue);
+
+        const boxShadowNumbers = `${this.insetValue ? "inset" : ""} ${this.horizontalTextInput.value}px ${this.verticalTextInput.value}px ${this.blurTextInput.value}px ${this.spreadTextInput.value}px rgba(${corToRgb}, ${this.opacityTextInput.value})`
+
+        this.box.style.boxShadow = boxShadowNumbers;
+
+        this.currentRule = boxShadowNumbers;
         // o currentRule se trata, nesse caso, do valor do input range. E como eu coloquei no HTML o value = "5" o valor será 5
     }
 
@@ -79,11 +88,29 @@ class BoxShadowGenerator {
             case spreadRangeInput:
                 this.spreadTextInput.value = target
             break;
+
+            case colorInput:
+                this.colorTextInput.value = target
+            break;
+
+            case opacityRangeInput:
+                this.opacityTextInput.value = target
+            break;
+            
+            case insetInput:
+                this.insetValue = target //Essa propriedade insetValue foi criado nesse case mesmo
+            break;
         }
 
         this.aplicandoSombraECode();
         this.colocandoNoCode();
     }
+
+    hexCorToRgb(hex) {
+        return `${("0x" + hex[1] + hex[2]) | 0}, ${("0x" + hex[3] + hex[4] | 0)}, ${("0x" + hex[5] + hex[6]) | 0}`;
+    }
+
+    //hexCorToRgb faz com que modifique as cores que vem do input color em hexadecimal para rgb
 
 }
 
@@ -152,6 +179,24 @@ spreadRangeInput.addEventListener("input", (e) => {
     const target = e.target.value;
 
     boxShadowConstructor.updateSombra(spreadRangeInput, target);
+})
+
+colorInput.addEventListener("input", (e) => {
+    const target = e.target.value;
+
+    boxShadowConstructor.updateSombra(colorInput, target);
+})
+
+opacityRangeInput.addEventListener("input", (e) => {
+    const target = e.target.value;
+
+    boxShadowConstructor.updateSombra(opacityRangeInput, target);
+})
+
+insetInput.addEventListener("input", (e) => {
+    const target = e.target.checked;
+
+    boxShadowConstructor.updateSombra(insetInput, target);
 })
 
 console.log(boxShadowConstructor);

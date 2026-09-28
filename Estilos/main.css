@@ -154,6 +154,10 @@ h2 {
     font: normal 300 1.9em 'Principal',Arial, Helvetica, sans-serif;
 }
 
+#iopacityText {
+    max-width: 40px;
+}
+
 div#blocoBoxShadow {
     width: 100%;
     max-width: 441px;
@@ -187,6 +191,11 @@ div#campCopiaCode {
 
 div#campCopiaCode:hover {
     background-color: rgba(219, 158, 134, 0.582);
+}
+
+div#campCopiaCode:active {
+    background-color: rgba(235, 174, 150, 0.788);
+    transition: .1s;
 }
 
 h3 {
@@ -223,9 +232,14 @@ div#campCopiaCode:hover .iconCopy {
     align-self: flex-start;
 }
 
+input {
+    cursor: pointer;
+}
+
 input#iInset {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 #paragrafoCor {
