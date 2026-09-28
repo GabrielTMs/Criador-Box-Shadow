@@ -199,6 +199,33 @@ insetInput.addEventListener("input", (e) => {
     boxShadowConstructor.updateSombra(insetInput, target);
 })
 
+const areaCodes = document.querySelector("#campCopiaCode");
+const campoCodes = document.querySelector("#codigoCopy");
+
+const textoInstrucao = document.querySelector("#instrucaoCopy");
+
+campoCodes.addEventListener("click", () => {
+    
+    const copiar = campoCodes.innerText.replace(/^\s*\n/gm, "");
+
+    console.log(copiar)
+
+    areaCodes.classList.add("copiado");
+
+    navigator.clipboard.writeText(copiar).then(() => {
+        
+        textoInstrucao.innerText = "Texto copiado com sucesso!";
+
+        setTimeout(() => {
+            textoInstrucao.innerText = "Copie e cole o código no seu arquivo de CSS:";
+
+            areaCodes.classList.remove("copiado");
+
+        }, 600);
+    });
+
+})
+
 console.log(boxShadowConstructor);
 
 boxShadowConstructor.linkInputs(); //Esse linkInputs é colocada aqui para funcionar essa função que iguala o value do input range com o input text, assim o range e o text tem o mesmo valor. Nesse caso no HTML eu coloquei o value do input range de 5, então por causa dessa função que iguala os dois, o value de ambos vai ser 5

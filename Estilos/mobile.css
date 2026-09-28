@@ -50,6 +50,7 @@
 
     h3 {
         text-align: center;
+        transition: .2s;
     }   
 
     div#campCopiaCode {

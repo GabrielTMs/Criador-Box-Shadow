@@ -228,6 +228,18 @@ div#campCopiaCode:hover .iconCopy {
     opacity: 1;
 }
 
+.fa-check-double {
+    display: none !important;
+}
+
+div#campCopiaCode.copiado .fa-check-double {
+    display: inline-block !important;
+}
+
+div#campCopiaCode.copiado .fa-copy {
+    display: none !important;
+}
+
 #opcaoInset {
     align-self: flex-start;
 }
@@ -254,9 +266,6 @@ input#iInset {
 input[type=color] {
     width: 80px;
     height: 35px;
-}
-.esconder {
-    display: none !important;
 }
 
 
